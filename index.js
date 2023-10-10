@@ -1,11 +1,14 @@
 // import library expressjs
 const express = require('express');
-const bodyParser = ('body-parser');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
+
 app.use(cors());
-app.use(bodyParser.json()); // for parsing application/json
+
+// for parsing application/json
+app.use(bodyParser.json()); 
 
 // create logger middleware function
 function LoggerMiddleware(req, res, next) {
